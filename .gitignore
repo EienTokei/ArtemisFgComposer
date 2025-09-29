@@ -1,0 +1,91 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# debug information files
+*.dwo
+
+# 编译生成的中间文件和目标文件
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+*.manifest
+*.res
+*.pch
+*.idb
+*.ipdb
+*.iobj
+*.tlb
+*.tlh
+*.bak
+*.sbr
+*.sdf
+*.opensdf
+*.vc.db
+*.vcxproj.filters
+*.vcxproj.user
+
+# 编译输出目录（包含Debug/Release等）
+Debug/
+Release/
+Build/
+Bin/
+x64/
+x86/
+Win32/
+out/
+build/
+
+# Visual Studio IDE 配置文件
+.vs/                  # VS的缓存和配置目录（包含用户特定设置）
+ipch/                 # 预编译头目录
+*.suo                 # 解决方案用户选项（记录窗口布局等）
+*.user                # 项目用户选项
+*.sdf                 # 智能感知数据库
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# 其他临时文件
+.DS_Store             # macOS系统文件
+Thumbs.db             # Windows缩略图缓存
+*.aps
