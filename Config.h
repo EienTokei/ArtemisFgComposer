@@ -29,7 +29,7 @@ struct Config {
 
     // ¹¹Ôìº¯Êý
     Config() = default;
-    Config(const std::string& inDir, const std::string& outDir = "", const std::string& luaPath = "");
+    Config(const std::string& inDir, const std::string& outDir = "", const std::string& luaFilePath = "");
     explicit Config(int argc, char* argv[]);
 
     void InitializeDefaultValues();

@@ -135,7 +135,6 @@ private:
     /**
      * @brief 生成输出文件名
      * @param components 组件文件名列表
-     * @param group 组名
      * @return 输出文件名
      */
     std::string makeOutputFilename(const std::vector<std::string>& components) const;

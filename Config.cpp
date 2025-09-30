@@ -5,8 +5,8 @@
 #include "Config.h"
 
 // Config 的方法实现
-Config::Config(const std::string& inDir, const std::string& outDir, const std::string& luaPath)
-    : inputDir(inDir),outputDir(outDir), luaPath(luaPath) {
+Config::Config(const std::string& inDir, const std::string& outDir, const std::string& luaFilePath)
+    : inputDir(inDir), outputDir(outDir), luaPath(luaFilePath) {
     InitializeDefaultValues();
     InitializeDefaultRules();
 }
@@ -99,7 +99,10 @@ Config Config::Parse(int argc, char* argv[]) {
 }
 
 bool Config::Validate() const {
-    if (inputDir.empty() && !helpRequested) {
+    if (helpRequested) {
+        return true;
+    }
+    if (inputDir.empty()) {
         Logger::Error("必须指定输入目录");
         return false;
     }
@@ -159,7 +162,9 @@ void Logger::Log(Level level, const std::string& message) {
     localtime_s(&tm, &time);
     ss << std::put_time(&tm, "%Y-%m-%d %H:%M:%S");
 
-    std::cerr << "[" << ss.str() << "] "
+    auto& output = (level >= Level::WARNING) ? std::cerr : std::cout;
+
+    output << "[" << ss.str() << "] "
         << "[" << LevelToString(level) << "] "
         << message << std::endl;
 }

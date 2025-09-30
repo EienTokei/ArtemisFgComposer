@@ -754,12 +754,12 @@ ImageData ImageProcessor::Blend(const ImageData& bg, const ImageData& fg, int x,
     return result;
 }
 
-bool ImageProcessor::IsCoordinateValid(const ImageData& image, int x, int y) {
+bool ImageProcessor::IsPosValid(const ImageData& image, int x, int y) {
     return x >= 0 && x < image.width && y >= 0 && y < image.height;
 }
 
 uint8_t* ImageProcessor::GetPixelPtr(ImageData& image, int x, int y) {
-    if (!IsCoordinateValid(image, x, y)) {
+    if (!IsPosValid(image, x, y)) {
         return nullptr;
     }
 
@@ -767,7 +767,7 @@ uint8_t* ImageProcessor::GetPixelPtr(ImageData& image, int x, int y) {
 }
 
 const uint8_t* ImageProcessor::GetPixelPtr(const ImageData& image, int x, int y) {
-    if (!IsCoordinateValid(image, x, y)) {
+    if (!IsPosValid(image, x, y)) {
         return nullptr;
     }
 

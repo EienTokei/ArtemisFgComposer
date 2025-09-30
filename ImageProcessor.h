@@ -115,7 +115,7 @@ public:
      * @param y Y坐标
      * @return 在范围内返回true，否则返回false
      */
-    static bool IsCoordinateValid(const ImageData& image, int x, int y);
+    static bool IsPosValid(const ImageData& image, int x, int y);
 
     /**
      * @brief 获取像素值的指针
